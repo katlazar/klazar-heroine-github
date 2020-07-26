@@ -9,13 +9,12 @@
     padding-top: 0;
   }
   nav a {
-    padding: 10px 20px;
+    padding: 5px 10px;
     text-decoration: none;
     margin-top: 20px;
-    padding-top: 2;
     display: inline-block;
-    background-color: #fee;
-    border-radius: 15px;
+    background-color: rgb(175, 121, 159);
+    border-radius: 20px;
   }
   nav a:visited, a:link {
     color: #334953;

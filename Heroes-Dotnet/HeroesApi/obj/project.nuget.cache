@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rMEjdntHQkb/9kL+xYwPLLYi/LuZ+FAZTCis7He4D9PrreCffkAnhENcvsiKN2/fl3uNT91zUbdne/nG+AYQNg==",
+  "dgSpecHash": "taX4mxCYChE7n+BUldNysIu7j/G6Lhd0cRhlpqLtEGExc3KauLFS0Ws2TRpAnhanEs8FS1/x3JiXOlkZEuJWSA==",
   "success": true,
-  "projectFilePath": "C:\\Repos\\klazar-heroine\\Heroes-Dotnet\\HeroesApi\\HeroesApi.csproj",
+  "projectFilePath": "C:\\Repos\\klazar-heroine\\heroes-dotnet\\heroesapi\\HeroesApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\K.Lazar\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\K.Lazar\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

@@ -21,13 +21,19 @@ func main() {
 	router.Use(static.Serve("/", static.LocalFile("./AngularApp", true)))
 
 	api := router.Group("/api")
+	cam := "/heroes"
+
 	{
-		api.GET("/heroes", controllers.GetHeroes)
-		api.GET("/heroes/:id", controllers.GetHero)
-		api.POST("/heroes", controllers.AddHero)
-		api.PUT("/heroes/:id", controllers.PutHero)
-		api.DELETE("/heroes/:id", controllers.DeleteHero)
+		api.GET(cam, controllers.GetHeroes)
+		api.GET(cam+"/:id", controllers.GetHero)
+		api.POST(cam, controllers.AddHero)
+		api.PUT(cam+"/:id", controllers.PutHero)
+		api.DELETE(cam+"/:id", controllers.DeleteHero)
 	}
+
+	router.NoRoute(func(c *gin.Context) {
+		c.File("./AngularApp/index.html")
+	})
 
 	router.Run()
 }

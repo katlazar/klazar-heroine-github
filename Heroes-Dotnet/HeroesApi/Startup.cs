@@ -1,8 +1,10 @@
 // Unused usings removed
+using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using HeroesApi.Models;
@@ -48,7 +50,19 @@ namespace HeroesApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+	    app.UseFileServer(new FileServerOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                  Path.Combine(Directory.GetCurrentDirectory(), "AngularApp")),
+                RequestPath = "",
+
+            });		
+            //app.UseHttpsRedirection();
+            DefaultFilesOptions options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("index.html");
+            app.UseDefaultFiles(options);
+            app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -64,6 +78,7 @@ namespace HeroesApi
                 // ... and catch file errors too    
                 endpoints.MapFallbackToFile("{*path:file}", "/index.html");
             });
+            
         }
     }
 }

@@ -1,8 +1,27 @@
-bin
-obj/Debug
-obj/Release
-**/*.targets
-**/*.props
-**/*.cache
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Visual Studio Code
 .vscode
-*AngularApp
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+AngularApp
+out
+# Visual Studio 2015
+.vs/

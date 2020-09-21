@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 
-	"herosi/controllers"
+	heroc "herosi/controllers"
 	"herosi/models"
 )
 
@@ -21,14 +21,14 @@ func main() {
 	router.Use(static.Serve("/", static.LocalFile("./AngularApp", true)))
 
 	api := router.Group("/api")
-	cam := "/heroes"
+	cam := "/heroitems"
 
 	{
-		api.GET(cam, controllers.GetHeroes)
-		api.GET(cam+"/:id", controllers.GetHero)
-		api.POST(cam, controllers.AddHero)
-		api.PUT(cam+"/:id", controllers.PutHero)
-		api.DELETE(cam+"/:id", controllers.DeleteHero)
+		api.GET(cam, heroc.GetHeroes)
+		api.GET(cam+"/:id", heroc.GetHero)
+		api.POST(cam, heroc.AddHero)
+		api.PUT(cam+"/:id", heroc.PutHero)
+		api.DELETE(cam+"/:id", heroc.DeleteHero)
 	}
 
 	router.NoRoute(func(c *gin.Context) {

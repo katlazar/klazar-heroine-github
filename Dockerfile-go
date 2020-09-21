@@ -1,0 +1,27 @@
+### Golang ANGULAR APP Dockerfile ###
+# Build Angular-Client
+FROM node:alpine AS ang-client
+RUN mkdir /app
+WORKDIR /app
+COPY ./Heroes-Angular/angular-tour-of-heroes/package.json ./
+RUN npm install 
+COPY /Heroes-Angular/angular-tour-of-heroes .
+RUN npm run build --prod
+
+# Build GO-Server
+FROM golang:latest AS go-server
+WORKDIR /app
+COPY ./Heroes-Golang/Herosi ./
+RUN go get -d -v ./
+RUN go install -v ./
+RUN GOARCH=amd64 GOOS=linux CGO_ENABLED=1 go build -ldflags "-linkmode external -extldflags -static" -o main .
+
+# Run Server and Client 
+FROM scratch AS final
+WORKDIR /app
+LABEL author="k.lazar@dtpoland.com"
+COPY --from=ang-client /app/dist/angular-tour-of-heroes ./AngularApp
+COPY --from=go-server /app/ .
+
+EXPOSE 8080
+CMD [ "./main" ]

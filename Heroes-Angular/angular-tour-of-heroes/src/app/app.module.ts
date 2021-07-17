@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-import { HttpClientModule } from '@angular/common/http';
+//import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -11,6 +12,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule }     from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { TokenInterceptor } from './TokenInterceptor';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     //),
     AppRoutingModule
   ],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }, ],
   
   bootstrap: [AppComponent]
 })

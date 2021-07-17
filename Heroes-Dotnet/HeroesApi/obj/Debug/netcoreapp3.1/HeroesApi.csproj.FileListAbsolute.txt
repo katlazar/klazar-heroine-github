@@ -126,3 +126,10 @@ C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\ru\Micro
 C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Repos\klazar-heroine\Heroes-Dotnet\HeroesApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

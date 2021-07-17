@@ -1,6 +1,8 @@
-using HeroesApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using HeroesApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace HeroesApi.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/HeroItems")]
     public class HeroItemsController : ControllerBase
     {

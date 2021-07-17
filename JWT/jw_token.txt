@@ -1,0 +1,9 @@
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJkdHBvbGFuZC5jb20iLCJpYXQiOjE2MjY1MTU2MzYsImV4cCI6MTY1ODA1MjI1MCwiYXVkIjoiSGVyb0FjYWRlbXkiLCJzdWIiOiJrLmxhemFyQGR0cG9sYW5kLmNvbSJ9._utDSAgOVnF7JUsVUQkxInMTizRR0KA_NLBMhAHiQq8
+no te preocupes
+{
+  "iss": "dtpoland.com",
+  "iat": 1626515636,
+  "exp": 1658052250,
+  "aud": "HeroAcademy",
+  "sub": "k.lazar@dtpoland.com"
+}

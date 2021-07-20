@@ -11,7 +11,7 @@ namespace HeroesApi.Controllers
 {
     [ApiController]
     [Authorize]
-    [Route("api/HeroItems")]
+    [Route("api/heroitems")]
     public class HeroItemsController : ControllerBase
     {
         private readonly HeroContext _context;
@@ -21,14 +21,14 @@ namespace HeroesApi.Controllers
             _context = context;
         }
 
-        // GET: api/HeroItems
+        // GET: api/heroitems
         [HttpGet]
         public async Task<ActionResult<IEnumerable<HeroItem>>> GetHeroItems()
         {
             return await _context.HeroItems.ToListAsync();
         }
 
-        // GET: api/HeroItems/5
+        // GET: api/heroitems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<HeroItem>> GetHeroItem(long id)
         {
@@ -42,7 +42,7 @@ namespace HeroesApi.Controllers
             return heroItem;
         }
 
-        // PUT: api/HeroItems/5
+        // PUT: api/heroitems/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutHeroItem(long id, HeroItem heroItem)
         {
@@ -72,7 +72,7 @@ namespace HeroesApi.Controllers
             return NoContent();
         }
 
-        // POST: api/HeroItems
+        // POST: api/heroitems
         [HttpPost]
         public async Task<ActionResult<HeroItem>> PostHeroItem(HeroItem heroItem)
         {
@@ -82,7 +82,7 @@ namespace HeroesApi.Controllers
             return CreatedAtAction("GetHeroItem", new { id = heroItem.Id }, heroItem);
         }
 
-        // DELETE: api/HeroItems/5
+        // DELETE: api/heroitems/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<HeroItem>> DeleteHeroItem(long id)
         {

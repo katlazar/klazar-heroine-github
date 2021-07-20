@@ -12,7 +12,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule }     from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { TokenInterceptor } from './TokenInterceptor';
+import { TokenInterceptor } from './tokeninterceptor';
 
 @NgModule({
   declarations: [
